@@ -1,6 +1,13 @@
-import "./styles.css";
+import React from "react";
 import Users from "./Users";
+import { UsersProvider } from "./UsersContext";
 
-export default function App() {
-  return <Users />;
+function App() {
+  return (
+    <UsersProvider>
+      <Users />
+    </UsersProvider>
+  );
 }
+
+export default App;
